@@ -5,7 +5,10 @@
 */
 
 //Code here
-
+let me = {
+  'name': 'Courtney',
+  'age': 'age',
+}
 
 
 //////////////////////////// PROBLEM 2 ////////////////////////////
@@ -16,21 +19,26 @@
 //and goodBoy (a boolean).
 
 //Code here
-
+let dog = {
+  name: "Shiloh",
+  color: 'brown/black',
+  age: 3,
+  goodBoy: true
+}
 
 
 //////////////////////////// PROBLEM 3 ////////////////////////////
 /* Print out the name of the dog you created in problem 2 using dot-notation. */
 
 //Code here
-
+console.log(dog.name)
 
 
 //////////////////////////// PROBLEM 4 ////////////////////////////
 /* Print out the color of the dog you created in problem 2 using bracket-notation. */
 
 //Code here
-
+console.log(dog ['color'])
 
 
 //////////////////////////// PROBLEM 5 ////////////////////////////
@@ -40,24 +48,34 @@
 */
 
 //Code here
-
-
+let favoriteThings = {
+  band: 'Lord Huron',
+  food: 'naan',
+  person: 'Mia',
+  book: 'In the Flo',
+  movie: 'A Star is Born',
+  holiday: 'Christmas',
+}
+console.log(favoriteThings)
 /*
   After you've made your object, use bracket or dot notation to add another key named 'car' with the value being your favorite car and then another key named 'brand' with the value being your favorite brand.
 */
 
 //Code here
+favoriteThings.car = 'porche cayenne',
+favoriteThings.brand = 'AloYoga'
 
-
+console.log(favoriteThings)
 /*
   Now use bracket or dot notation to change the value of the food key in your favoriteThings object to be 'Chicken Nuggets'
   and change the value of the book key in your favoriteThings object to be 'Harry Potter'.
 */
 
 //Code here
+favoriteThings.food = 'Chicken Nuggets',
+favoriteThings.book = 'Harry Potter'
 
-
-
+console.log(favoriteThings)
 //////////////////////////// PROBLEM 6 ////////////////////////////
 // Do not edit the code below.
 var user = {
@@ -77,7 +95,10 @@ var user = {
 */
 
 //Code Here
+user.name = 'Bryan G. Smith',
+user.email = 'bryan.smith@devmounta.in'
 
+console.log(user)
 
 //////////////////////////// PROBLEM 7 ////////////////////////////
 /*
@@ -85,7 +106,9 @@ var user = {
 */
 
 //Code Here
+delete user.age
 
+console.log(user)
 
 //////////////////////////// PROBLEM 8 ////////////////////////////
 /*
@@ -95,7 +118,17 @@ var user = {
 */
 
 //Code here
+class Cat {
+  constructor(name, age, color) {
+    this.name = name
+    this.age = age
+    this.color = color
+  }
+}
 
+let cat1 = new Cat('Tabby', 'munchkin', '2')
+
+console.log(cat1.name)
 
 
 //////////////////////////// PROBLEM 9 ////////////////////////////
@@ -107,6 +140,20 @@ var user = {
 */
 
 //Code here
+class Wizard {
+  constructor(name, age, favoriteSpell) {
+    this.name = name,
+    this.age = age,
+    this.favoriteSpell = favoriteSpell
+  }
+
+castSpell() {
+console.log(`${this.name} has cast ${this.favoriteSpell}`)
+}
+}
+let harry = new Wizard('Harry', 17, 'truffles spell')
+
+harry.castSpell()
 
 //////////////////////////// PROBLEM 10 ////////////////////////////
 /*
@@ -132,6 +179,27 @@ var user = {
 */
 
 //Code Here
+class Phone {
+  constructor(brand, model, storage, color, price) {
+    this.brand = brand,
+    this.model = model,
+    this.storage = storage,
+    this.color = color,
+    this.price = price,
+    this.sold = false ;
+  } 
+  sell () {
+    this.sold = true ;
+    console.log(`${this.brand} ${this.model} has been sold.`) ;
+  }
+  changePrice (newPrice) {
+    this.price = newPrice
+  }
+}
+let iPhone = new Phone (`Apple`, `iPhone`, 250, `gold`, 850)
+
+iPhone.changePrice(780)
+console.log(iPhone)
 
   
 /*
@@ -145,6 +213,15 @@ var user = {
 */
 
 //Code Here
+let samsung = new Phone(`Samsung`, `galaxy`, 100, `blue`, 450);
+
+let windows = new Phone(`Windows`, `LX`, 150, `red`, 370);
+
+let iphone2 = new Phone(`Apple`, `iPhone2`, 250, `pink`, 990);
+
+console.log(samsung, windows, iphone2)
+
+
 
 /* 
   Call the changePrice function on one of your phones, 
@@ -154,7 +231,9 @@ var user = {
 */ 
 
 //Code Here 
+samsung.changePrice(390);
 
+console.log(samsung)
 
 /*
   Now call the sell method on one of your other phone objects
@@ -163,7 +242,8 @@ var user = {
 */
 
 //Code Here 
-
+iphone2.sell(true)
+console.log(iphone2)
 
 //////////////////////////// PROBLEM 11 ////////////////////////////
 
@@ -179,10 +259,12 @@ const colors = {
   highlight: 'blue',
   text: 'yellow'
 }
+
 //do not edit this object
 
 //Code Here 
-
+let faveColors = {... colors} ;
+console.log(faveColors) ;
 
 
 /*
@@ -210,7 +292,9 @@ const shippingInfo = {
 //do not edit the objects above
 
 //Code Here
+let helensInfo = {...contactInfo,...shippingInfo}
 
+console.log(helensInfo)
 
 //Print helensInfo to see what it looks like, there should be no repeating properties.
 
