@@ -312,6 +312,19 @@ console.log(helensInfo)
 */
 
 //Code Here 
+class Vehicle{
+  constructor(capacity, color, mileage) {
+    this.capacity = capacity,
+    this.color = color,
+    this.mileage = mileage
+  }
+  move(miles){
+    this.mileage += miles
+    console.log(this.mileage)
+
+  }
+}
+
 
 
 /*
@@ -319,7 +332,7 @@ console.log(helensInfo)
 */
 
 //Code Here
-
+let myFirstVehicle
 
 /* 
   Now we'll create a class that's based off of the vehicle class. 
